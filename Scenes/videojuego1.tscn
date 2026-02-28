@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://muc2eoakagbc"]
+
+[ext_resource type="Texture2D" uid="uid://dqrryvu8a4jeu" path="res://Assets/stones&grass.png" id="2_nryn4"]
+[ext_resource type="PackedScene" uid="uid://b1mnp6bp3u53l" path="res://Scenes/dragon.tscn" id="2_sllrs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sllrs"]
+size = Vector2(1926.58, 584.658)
+
+[node name="Level1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [5027.0]
+
+[node name="Dragon" parent="." instance=ExtResource("2_sllrs")]
+position = Vector2(117, 154)
+
+[node name="piso" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="piso"]
+position = Vector2(270, 547)
+scale = Vector2(0.283923, 0.186434)
+texture = ExtResource("2_nryn4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="piso/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso/Sprite2D/StaticBody2D"]
+position = Vector2(1.76105, 265.51)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sllrs")
