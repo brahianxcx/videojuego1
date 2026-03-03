@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var speed = 100
-var jump_force = 400
-var gravity = 500
+var speed = 280
+var jump_force = 450
+var gravity = 1000
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -25,3 +25,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction.y * jump_force
 		
 	move_and_slide()
+	
+func game_over():
+	get_tree().reload_current_scene()
