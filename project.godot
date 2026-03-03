@@ -14,3 +14,7 @@ config/name="videojuego1"
 run/main_scene="uid://muc2eoakagbc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+hero=""
