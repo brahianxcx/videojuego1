@@ -8,8 +8,9 @@ size = Vector2(64, 32)
 
 [node name="espinas" type="Area2D"]
 script = ExtResource("1_m0fgp")
+skin = ExtResource("2_y1luu")
 
-[node name="Spikes" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -24)
 texture = ExtResource("2_y1luu")
 

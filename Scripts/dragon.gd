@@ -23,6 +23,9 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor() and direction.y == -1:
 		velocity.y = direction.y * jump_force
+	
+	if global_position.y > 1500:
+		game_over()
 		
 	move_and_slide()
 	
