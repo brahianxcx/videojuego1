@@ -1,15 +1,20 @@
-[gd_scene load_steps=34 format=4 uid="uid://muc2eoakagbc"]
+[gd_scene load_steps=38 format=4 uid="uid://muc2eoakagbc"]
 
 [ext_resource type="Texture2D" uid="uid://cter0lj5vtcg6" path="res://Assets/1.png" id="1_8o4ph"]
 [ext_resource type="Texture2D" uid="uid://djyqbvafay6f0" path="res://Assets/4.png" id="2_q31jb"]
 [ext_resource type="PackedScene" uid="uid://b1mnp6bp3u53l" path="res://Scenes/dragon.tscn" id="2_sllrs"]
 [ext_resource type="Texture2D" uid="uid://ptvmbiw5oiv" path="res://Assets/recursos.png" id="3_23wwm"]
-[ext_resource type="AudioStream" uid="uid://b6v688aabxgiq" path="res://Assets/JDSherbert - Ambiences Music Pack - Dark Dark Woods.mp3" id="4_5bski"]
+[ext_resource type="AudioStream" uid="uid://davxru4d2mbbs" path="res://sonidos/Feid - Normal (Official Video).mp3" id="4_q31jb"]
 [ext_resource type="PackedScene" uid="uid://bx4qio680ft7v" path="res://Scenes/espinas.tscn" id="5_23wwm"]
 [ext_resource type="Texture2D" uid="uid://cjq7o22vwcum0" path="res://Assets/casitas.png" id="8_rxtli"]
 [ext_resource type="Texture2D" uid="uid://7ongp85wm78e" path="res://Assets/tilemap.png" id="9_rxtli"]
 [ext_resource type="PackedScene" uid="uid://dptp15vx6tsme" path="res://Scenes/lava_2d.tscn" id="9_u4j55"]
-[ext_resource type="PackedScene" uid="uid://cyv1tnebt0fls" path="res://saw.tscn" id="10_u4j55"]
+[ext_resource type="PackedScene" uid="uid://cyv1tnebt0fls" path="res://Scenes/saw.tscn" id="10_u4j55"]
+[ext_resource type="PackedScene" uid="uid://bv8chpncerih7" path="res://Scenes/abeja.tscn" id="12_8lq28"]
+[ext_resource type="PackedScene" uid="uid://buxlrys2lvqwi" path="res://Scenes/coin.tscn" id="12_8o4ph"]
+[ext_resource type="PackedScene" uid="uid://dcmkmd3c5y511" path="res://Scenes/gema.tscn" id="13_q31jb"]
+
+[sub_resource type="GDScript" id="GDScript_fehj1"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8lq28"]
 
@@ -5397,11 +5402,12 @@ texture_region_size = Vector2i(19, 19)
 sources/0 = SubResource("TileSetAtlasSource_q31jb")
 
 [node name="Level1" type="Node2D"]
+script = SubResource("GDScript_fehj1")
 metadata/_edit_horizontal_guides_ = [5027.0]
 metadata/_edit_vertical_guides_ = [8747.0]
 
 [node name="Orig" type="Sprite2D" parent="."]
-position = Vector2(15287, -1136)
+position = Vector2(14396, -1417)
 scale = Vector2(56.8646, 19.2469)
 texture = ExtResource("1_8o4ph")
 
@@ -5431,7 +5437,7 @@ position = Vector2(50.3173, 143.927)
 scale = Vector2(0.0331035, 0.0821504)
 
 [node name="audiofondo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5bski")
+stream = ExtResource("4_q31jb")
 autoplay = true
 
 [node name="piso" type="Node2D" parent="."]
@@ -5703,7 +5709,7 @@ scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_8lq28")
 
 [node name="personaje" parent="." groups=["hero"] instance=ExtResource("2_sllrs")]
-position = Vector2(8352, 1000)
+position = Vector2(5814, -92)
 
 [node name="saw" parent="." instance=ExtResource("10_u4j55")]
 position = Vector2(6296, -176)
@@ -5712,3 +5718,24 @@ move_dir = Vector2(200, 200)
 [node name="saw2" parent="." instance=ExtResource("10_u4j55")]
 position = Vector2(9632, -24)
 move_dir = Vector2(200, 200)
+
+[node name="abeja" parent="." instance=ExtResource("12_8lq28")]
+position = Vector2(3957, 58)
+up_direction = Vector2(1, 0)
+slide_on_ceiling = false
+move_dir = Vector2(-1, 0)
+
+[node name="abeja2" parent="." instance=ExtResource("12_8lq28")]
+position = Vector2(4092, 100)
+up_direction = Vector2(1, 0)
+slide_on_ceiling = false
+move_dir = Vector2(-1, 0)
+
+[node name="coin" parent="." instance=ExtResource("12_8o4ph")]
+position = Vector2(5958, -52)
+
+[node name="coin2" parent="." instance=ExtResource("12_8o4ph")]
+position = Vector2(6109, -35)
+
+[node name="Area2D" parent="." instance=ExtResource("13_q31jb")]
+position = Vector2(5896, 48)

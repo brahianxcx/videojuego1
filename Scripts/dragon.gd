@@ -3,6 +3,11 @@ extends CharacterBody2D
 var speed = 280
 var jump_force = 450
 var gravity = 1000
+var score = 0
+var gemas = 0
+
+@onready var score_text : Label = get_node("CanvasLayer/HBoxContainer/Label")
+@onready var gem_text : Label = get_node("CanvasLayer/HBoxContainer/Label2")
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -31,3 +36,13 @@ func _physics_process(delta: float) -> void:
 	
 func game_over():
 	get_tree().reload_current_scene()
+	
+func  add_score(amount):
+	score+= amount
+	score_text.text = str(score)
+	
+	print(score)
+	
+func add_gemas(amount):
+	gemas += amount
+	gem_text.text = str(gemas)
