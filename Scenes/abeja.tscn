@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv8chpncerih7"]
+
+[ext_resource type="Script" uid="uid://4s7u5s7s7joi" path="res://Scripts/abeja.gd" id="1_won50"]
+[ext_resource type="Texture2D" uid="uid://cyg52ydlxgiee" path="res://Assets/enemigos/bee_a.png" id="2_cuow7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qnsic"]
+radius = 26.0192
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hygs5"]
+radius = 26.0
+
+[node name="abeja" type="CharacterBody2D" groups=["hero"]]
+script = ExtResource("1_won50")
+
+[node name="BeeA" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+texture = ExtResource("2_cuow7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+scale = Vector2(1.02766, 0.627017)
+shape = SubResource("CircleShape2D_qnsic")
+
+[node name="HitArea" type="Area2D" parent="."]
+position = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(-3, 1)
+scale = Vector2(1.21264, -0.703128)
+shape = SubResource("CircleShape2D_hygs5")
+
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

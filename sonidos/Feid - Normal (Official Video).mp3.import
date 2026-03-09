@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://davxru4d2mbbs"
+path="res://.godot/imported/Feid - Normal (Official Video).mp3-9617f3ebe0bd3ba4b800b35ecb7460fa.mp3str"
+
+[deps]
+
+source_file="res://sonidos/Feid - Normal (Official Video).mp3"
+dest_files=["res://.godot/imported/Feid - Normal (Official Video).mp3-9617f3ebe0bd3ba4b800b35ecb7460fa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
