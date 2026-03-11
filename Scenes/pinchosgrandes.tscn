@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0sxiynqlqs1y"]
 
-[ext_resource type="Script" uid="uid://cqvubd2ch1ks" path="res://pinchosgrandes.gd" id="1_1rkri"]
+[ext_resource type="Script" uid="uid://cqvubd2ch1ks" path="res://Scripts/pinchosgrandes.gd" id="1_1rkri"]
 [ext_resource type="Texture2D" uid="uid://dl5hdm7i6n3uc" path="res://Assets/spikes.png" id="1_gy48g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rkri"]

@@ -1,14 +1,21 @@
 extends CharacterBody2D
 
-var speed = 280
-var jump_force = 450
+var speed = 200
+var jump_force = 300
 var gravity = 1000
 var score = 0
 var gemas = 0
 
 @onready var score_text : Label = get_node("CanvasLayer/HBoxContainer/Label")
 @onready var gem_text : Label = get_node("CanvasLayer/HBoxContainer/Label2")
+@onready var anim : AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	anim.play("idle")
+	
+	
+	
+	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	
@@ -18,16 +25,38 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_up"):
 		direction.y = -1
 		
+		
 	if Input.is_action_pressed("ui_left"):
 		direction.x = -1
 		
-	if Input.is_action_pressed("ui_right"):
+		anim.flip_h = true
+		
+		
+	elif Input.is_action_pressed("ui_right"):
 		direction.x = 1
+		
+		anim.flip_h = false
+		
+		
 		
 	velocity.x = direction.x * speed
 	
 	if is_on_floor() and direction.y == -1:
 		velocity.y = direction.y * jump_force
+	
+	if not is_on_floor():
+		
+		anim.play("jump")
+	else:
+		
+		if velocity.x != 0:
+			anim.play("walk")
+		else:
+			anim.play("idle")
+
+	move_and_slide()
+	
+	
 	
 	if global_position.y > 1500:
 		game_over()
