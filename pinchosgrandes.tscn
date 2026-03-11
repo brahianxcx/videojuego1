@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0sxiynqlqs1y"]
+
+[ext_resource type="Script" uid="uid://cqvubd2ch1ks" path="res://pinchosgrandes.gd" id="1_1rkri"]
+[ext_resource type="Texture2D" uid="uid://dl5hdm7i6n3uc" path="res://Assets/spikes.png" id="1_gy48g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rkri"]
+size = Vector2(208, 216)
+
+[node name="pinchosgrandes" type="Area2D"]
+script = ExtResource("1_1rkri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56, -76)
+shape = SubResource("RectangleShape2D_1rkri")
+
+[node name="Spikes" type="Sprite2D" parent="."]
+position = Vector2(54, -170)
+scale = Vector2(3.3125, 6.4375)
+texture = ExtResource("1_gy48g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
