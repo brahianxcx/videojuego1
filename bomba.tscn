@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfraa3ylqi4l"]
+
+[ext_resource type="Script" uid="uid://cniji38b61fbw" path="res://bomba.gd" id="1_ncxna"]
+[ext_resource type="Texture2D" uid="uid://bwtl6nydcxj8b" path="res://Assets/bomb.png" id="2_7fjjm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apik8"]
+size = Vector2(8, 16)
+
+[node name="bomba" type="Area2D"]
+script = ExtResource("1_ncxna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_apik8")
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2(-4, 0)
+scale = Vector2(0.125, 0.25)
+texture = ExtResource("2_7fjjm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

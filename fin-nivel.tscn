@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8xigwpwmcbt8"]
+
+[ext_resource type="Texture2D" uid="uid://ch73xhruv0c76" path="res://Assets/final 1.png" id="1_o4ku8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Final1" type="Sprite2D" parent="."]
+position = Vector2(568, 328)
+scale = Vector2(0.595833, 0.611111)
+texture = ExtResource("1_o4ku8")

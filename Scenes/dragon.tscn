@@ -5,9 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dbosj7nkm4cy0" path="res://Assets/coin_gold.png" id="3_d8ryr"]
 [ext_resource type="Texture2D" uid="uid://dlss8nv1tunt3" path="res://Assets/gem_red.png" id="4_gfnx5"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_mtyor"]
-a = Vector2(0, -1.6114)
-b = Vector2(0, 7.65414)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfnx5"]
+size = Vector2(3.0754, 9.44806)
 
 [node name="personaje" type="CharacterBody2D"]
 position = Vector2(32, 0)
@@ -20,9 +19,9 @@ scale = Vector2(0.604181, 0.913589)
 texture = ExtResource("2_mtyor")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16.3934, 28.1908)
+position = Vector2(-16.3934, 3.13231)
 scale = Vector2(6.39661, -7.95672)
-shape = SubResource("SegmentShape2D_mtyor")
+shape = SubResource("RectangleShape2D_gfnx5")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
