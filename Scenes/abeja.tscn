@@ -1,20 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv8chpncerih7"]
+[gd_scene load_steps=7 format=3 uid="uid://bv8chpncerih7"]
 
 [ext_resource type="Script" uid="uid://4s7u5s7s7joi" path="res://Scripts/abeja.gd" id="1_won50"]
-[ext_resource type="Texture2D" uid="uid://cyg52ydlxgiee" path="res://Assets/enemigos/bee_a.png" id="2_cuow7"]
+[ext_resource type="Texture2D" uid="uid://dscvh3hh8jm10" path="res://animaciones/bee_a.png" id="2_cuow7"]
+[ext_resource type="Texture2D" uid="uid://b5gvcd5m85vl0" path="res://animaciones/bee_b.png" id="3_w508p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mv17k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cuow7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w508p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qnsic"]
 radius = 26.0192
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hygs5"]
-radius = 26.0
+radius = 24.7803
 
-[node name="abeja" type="CharacterBody2D" groups=["hero"]]
+[node name="abeja" type="CharacterBody2D"]
 script = ExtResource("1_won50")
 
-[node name="BeeA" type="Sprite2D" parent="."]
-position = Vector2(-1, -1)
-texture = ExtResource("2_cuow7")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mv17k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 3)

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6agtg0fdgxub"]
+
+[ext_resource type="Script" uid="uid://cksky3ivbn6m3" path="res://Scripts/caracolasesino.gd" id="1_v3rqn"]
+[ext_resource type="Texture2D" uid="uid://c4mnipluq7w7" path="res://Assets/enemigos/snail_walk_a.png" id="2_1b2p6"]
+[ext_resource type="Texture2D" uid="uid://0refvsoq2hm3" path="res://Assets/enemigos/snail_walk_b.png" id="3_pa03x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3iy77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1b2p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pa03x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rqn"]
+size = Vector2(53, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7n1k"]
+size = Vector2(70, 50)
+
+[node name="CARACOLASESINO" type="CharacterBody2D"]
+script = ExtResource("1_v3rqn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32.5, -18.5)
+scale = Vector2(1.29688, 1.17187)
+sprite_frames = SubResource("SpriteFrames_3iy77")
+frame_progress = 0.508433
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31.5, -10)
+shape = SubResource("RectangleShape2D_v3rqn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, -11)
+shape = SubResource("RectangleShape2D_h7n1k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

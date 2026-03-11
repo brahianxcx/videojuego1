@@ -1,11 +1,10 @@
-[gd_scene load_steps=44 format=4 uid="uid://muc2eoakagbc"]
+[gd_scene load_steps=47 format=4 uid="uid://muc2eoakagbc"]
 
 [ext_resource type="Texture2D" uid="uid://cter0lj5vtcg6" path="res://Assets/1.png" id="1_8o4ph"]
 [ext_resource type="Texture2D" uid="uid://djyqbvafay6f0" path="res://Assets/4.png" id="2_q31jb"]
 [ext_resource type="PackedScene" uid="uid://b1mnp6bp3u53l" path="res://Scenes/dragon.tscn" id="2_sllrs"]
 [ext_resource type="Texture2D" uid="uid://ptvmbiw5oiv" path="res://Assets/recursos.png" id="3_23wwm"]
-[ext_resource type="PackedScene" uid="uid://bfraa3ylqi4l" path="res://bomba.tscn" id="4_drt42"]
-[ext_resource type="AudioStream" uid="uid://davxru4d2mbbs" path="res://sonidos/Feid - Normal (Official Video).mp3" id="4_q31jb"]
+[ext_resource type="PackedScene" uid="uid://bfraa3ylqi4l" path="res://Scenes/bomba.tscn" id="4_drt42"]
 [ext_resource type="PackedScene" uid="uid://bx4qio680ft7v" path="res://Scenes/espinas.tscn" id="5_23wwm"]
 [ext_resource type="Texture2D" uid="uid://cjq7o22vwcum0" path="res://Assets/casitas.png" id="8_rxtli"]
 [ext_resource type="Texture2D" uid="uid://7ongp85wm78e" path="res://Assets/tilemap.png" id="9_rxtli"]
@@ -14,10 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://bv8chpncerih7" path="res://Scenes/abeja.tscn" id="12_8lq28"]
 [ext_resource type="PackedScene" uid="uid://buxlrys2lvqwi" path="res://Scenes/coin.tscn" id="12_8o4ph"]
 [ext_resource type="PackedScene" uid="uid://dcmkmd3c5y511" path="res://Scenes/gema.tscn" id="13_q31jb"]
-[ext_resource type="Script" uid="uid://ifwe4hf58br5" path="res://Scenes/meta.gd" id="14_8lq28"]
-[ext_resource type="PackedScene" uid="uid://bq3r22o4sxmpi" path="res://pinchosmedianos.tscn" id="15_a6t6b"]
-[ext_resource type="PackedScene" uid="uid://c6agtg0fdgxub" path="res://caracolasesino.tscn" id="17_olukg"]
-[ext_resource type="PackedScene" uid="uid://d0sxiynqlqs1y" path="res://pinchosgrandes.tscn" id="18_g0ssu"]
+[ext_resource type="Script" uid="uid://ifwe4hf58br5" path="res://Scripts/meta.gd" id="14_8lq28"]
+[ext_resource type="PackedScene" uid="uid://bq3r22o4sxmpi" path="res://Scenes/pinchosmedianos.tscn" id="15_a6t6b"]
+[ext_resource type="Texture2D" uid="uid://7yha1coxxpc1" path="res://Assets/enemigos/slime_normal_walk_a.png" id="17_1cflg"]
+[ext_resource type="PackedScene" uid="uid://c6agtg0fdgxub" path="res://Scenes/caracolasesino.tscn" id="17_olukg"]
+[ext_resource type="Texture2D" uid="uid://obkbfh3us4dc" path="res://Assets/enemigos/slime_normal_walk_b.png" id="18_8jgrj"]
+[ext_resource type="PackedScene" uid="uid://d0sxiynqlqs1y" path="res://Scenes/pinchosgrandes.tscn" id="18_g0ssu"]
+[ext_resource type="PackedScene" uid="uid://dtikbfvw7jn0g" path="res://Scenes/genio.tscn" id="20_8jgrj"]
 
 [sub_resource type="GDScript" id="GDScript_fehj1"]
 script/source = "extends Node2D
@@ -28,7 +30,7 @@ func _on_meta_body_entered(body: Node2D) -> void:
 	# Usamos \"personaje\" que es el nombre que salió en tu consola
 	if body.name == \"personaje\":
 		print(\"¡Nombre correcto! Cambiando a escena...\")
-		get_tree().change_scene_to_file(\"res://fin-nivel.tscn\")
+		get_tree().change_scene_to_file(\"res://Scenes/fin-nivel.tscn\")
 	else:
 		print(\"El nombre no coincide con 'personaje'\")
 "
@@ -5421,13 +5423,27 @@ sources/0 = SubResource("TileSetAtlasSource_q31jb")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olukg"]
 size = Vector2(266, 583.5)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6m0rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_1cflg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8jgrj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level1" type="Node2D"]
 script = SubResource("GDScript_fehj1")
 metadata/_edit_horizontal_guides_ = [5027.0]
 metadata/_edit_vertical_guides_ = [8747.0]
 
 [node name="Orig" type="Sprite2D" parent="."]
-position = Vector2(15264, -1280)
+position = Vector2(15176, -1280)
 scale = Vector2(56.8646, 19.2469)
 texture = ExtResource("1_8o4ph")
 
@@ -5460,7 +5476,6 @@ scale = Vector2(0.0331035, 0.0821504)
 position = Vector2(92.008, 108.901)
 
 [node name="audiofondo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_q31jb")
 autoplay = true
 
 [node name="piso" type="Node2D" parent="."]
@@ -5732,7 +5747,7 @@ scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_8lq28")
 
 [node name="personaje" parent="." groups=["hero"] instance=ExtResource("2_sllrs")]
-position = Vector2(19864, 480)
+position = Vector2(25743, -95)
 
 [node name="saw" parent="." instance=ExtResource("10_u4j55")]
 position = Vector2(6248, -216)
@@ -5812,12 +5827,74 @@ position = Vector2(15568, 504)
 position = Vector2(19272, 568)
 
 [node name="CARACOLASESINO" parent="." instance=ExtResource("17_olukg")]
-position = Vector2(20936, 576)
+position = Vector2(21196, 566)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-1000, 0)
+
+[node name="slime" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(23577, 500)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-760, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="slime2" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(24346, 437)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-660, 0)
+frames = SubResource("SpriteFrames_6m0rp")
 
 [node name="CARACOLASESINO2" parent="." instance=ExtResource("17_olukg")]
-position = Vector2(17472, 512)
+position = Vector2(17490, 502)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-1111, 0)
 
 [node name="pinchosgrandes" parent="." instance=ExtResource("18_g0ssu")]
 position = Vector2(21684, 552)
+
+[node name="slime3" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(24809, 372)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-330, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="slime4" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(25523, 240)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-250, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="genio" parent="." instance=ExtResource("20_8jgrj")]
+position = Vector2(28417, -128)
+move_speed = 400
+move_dir = Vector2(-1, 0)
+
+[node name="CARACOLASESINO3" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(15344, 240)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-1111, 0)
+
+[node name="slime5" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(27516, 175)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-500, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="slime6" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(28514, 304)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-350, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="slime7" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(30118, 434)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-700, 0)
+frames = SubResource("SpriteFrames_6m0rp")
+
+[node name="slime8" parent="." instance=ExtResource("17_olukg")]
+position = Vector2(31284, 565)
+up_direction = Vector2(-1, 0)
+move_dir = Vector2(-500, 0)
+frames = SubResource("SpriteFrames_6m0rp")
 
 [connection signal="body_entered" from="meta" to="." method="_on_meta_body_entered"]

@@ -1,7 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyv1tnebt0fls"]
+[gd_scene load_steps=7 format=3 uid="uid://cyv1tnebt0fls"]
 
 [ext_resource type="Script" uid="uid://b5wunsyrdbdaq" path="res://Scripts/saw.gd" id="1_ddabk"]
-[ext_resource type="Texture2D" uid="uid://c66f3emiyjaaw" path="res://Assets/saw_a.png" id="2_m2ud2"]
+[ext_resource type="Texture2D" uid="uid://dbq7qvvsuqvgw" path="res://animaciones/saw_a.png" id="3_ngmcx"]
+[ext_resource type="Texture2D" uid="uid://dfejwmmmlk0eo" path="res://animaciones/saw_b.png" id="4_ijyew"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n0gsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ngmcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ijyew")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_reoe3"]
 radius = 32.0
@@ -12,8 +27,10 @@ radius = 32.0
 [node name="saw" type="CharacterBody2D"]
 script = ExtResource("1_ddabk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_m2ud2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n0gsv")
+frame = 1
+frame_progress = 0.997591
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_reoe3")
