@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed = 300
 @export var move_dir : Vector2
-@export var detection_radius : float = 2500 # Distancia corta para que no se activen solas
+@export var detection_radius : float = 1500 # Distancia corta para que no se activen solas
 @onready var anim : AnimatedSprite2D = $AnimatedSprite2D
 var activo : bool = false
 func _ready() -> void:
