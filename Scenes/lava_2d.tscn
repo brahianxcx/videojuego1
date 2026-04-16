@@ -7,6 +7,7 @@
 size = Vector2(64, 24)
 
 [node name="LAVA" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_t5owk")
 
 [node name="LavaTopLow" type="Sprite2D" parent="." groups=["hero"]]

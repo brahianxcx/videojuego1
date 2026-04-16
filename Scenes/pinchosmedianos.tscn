@@ -7,6 +7,7 @@
 size = Vector2(192, 64)
 
 [node name="pinchosmedianos" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_6cgdm")
 
 [node name="Spikes" type="Sprite2D" parent="."]

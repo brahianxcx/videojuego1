@@ -29,4 +29,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("hero"):
-		body.game_over()
+		body.hurt(global_position)
+		Globals.set_health(Globals.health-1)
+		#body.game_over()

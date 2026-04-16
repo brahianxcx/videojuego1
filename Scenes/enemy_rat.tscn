@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://oakkfy0la03e"]
+
+[ext_resource type="Texture2D" uid="uid://2ou3fuiqqtnc" path="res://Assets/enemigos/mouse_walk_a.png" id="1_1gcfn"]
+[ext_resource type="Script" uid="uid://c15xjoc5regsj" path="res://Scripts/enemy_rat.gd" id="1_u01s6"]
+[ext_resource type="Texture2D" uid="uid://df2d5w7cwqalg" path="res://Assets/enemigos/mouse_walk_b.png" id="2_u01s6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hdqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1gcfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u01s6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nui2n"]
+size = Vector2(61, 44)
+
+[node name="enemy_rat" type="CharacterBody2D"]
+script = ExtResource("1_u01s6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2hdqf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
+shape = SubResource("RectangleShape2D_nui2n")
+
+[node name="RayWall" type="RayCast2D" parent="."]
+target_position = Vector2(-52, 0)
+
+[node name="RayFall" type="RayCast2D" parent="."]
+position = Vector2(-40, 0)
+target_position = Vector2(0, 100)

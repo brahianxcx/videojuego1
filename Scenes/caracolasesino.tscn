@@ -25,6 +25,8 @@ size = Vector2(53, 48)
 size = Vector2(70, 50)
 
 [node name="CARACOLASESINO" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_v3rqn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -38,6 +40,7 @@ position = Vector2(31.5, -10)
 shape = SubResource("RectangleShape2D_v3rqn")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(32, -11)

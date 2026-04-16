@@ -7,6 +7,7 @@
 size = Vector2(208, 216)
 
 [node name="pinchosgrandes" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_1rkri")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
