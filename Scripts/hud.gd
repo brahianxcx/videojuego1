@@ -45,8 +45,9 @@ func update_hearts(n):
 			child.texture = heart_full
 		else:
 			child.texture = heart_empty
+			#child.modulate.a= 0.35
 		i+=1
-	pass
+	
 	
 	
 func update_lives(n) :

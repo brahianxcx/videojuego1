@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if global_position.y > 20000:
-		game_over()
+			Globals.set_lives(Globals.lives - 1)
 		
 	var vy_before = velocity.y
 	move_and_slide()
@@ -92,17 +92,19 @@ func hurt(hit_pos):
 	var dir = sign(global_position.x - hit_pos.x)
 	velocity = Vector2(250*dir, -220)
 	is_hurt = true
-	Globals.lives -= 1
-	print(Globals.lives)
+	
+	
+ 
 	
 	await get_tree().create_timer(float(250)/1000, true).timeout
 	is_hurt = false  
+	Globals.set_health(Globals.health-1)
 			
 	
 	
 
-func game_over():
-	get_tree().reload_current_scene()
+#func game_over():
+#	get_tree().reload_current_scene()
 	
 func add_score(amount):
 	Globals.add_score(amount)

@@ -5776,13 +5776,13 @@ move_dir = Vector2(200, 200)
 position = Vector2(15784, 64)
 move_dir = Vector2(200, 200)
 
-[node name="abeja" parent="." instance=ExtResource("12_8lq28")]
+[node name="abeja" parent="." groups=["enemies"] instance=ExtResource("12_8lq28")]
 position = Vector2(3904, 64)
 up_direction = Vector2(1, 0)
 slide_on_ceiling = false
 move_dir = Vector2(-1, 0)
 
-[node name="abeja2" parent="." instance=ExtResource("12_8lq28")]
+[node name="abeja2" parent="." groups=["enemies"] instance=ExtResource("12_8lq28")]
 position = Vector2(4092, 100)
 up_direction = Vector2(1, 0)
 slide_on_ceiling = false
@@ -5913,7 +5913,7 @@ move_dir = Vector2(-500, 0)
 frames = SubResource("SpriteFrames_6m0rp")
 
 [node name="personaje" parent="." groups=["hero"] instance=ExtResource("2_sllrs")]
-position = Vector2(29002, 259)
+position = Vector2(29670, 265)
 
 [node name="HUD" parent="." instance=ExtResource("22_lr4hc")]
 

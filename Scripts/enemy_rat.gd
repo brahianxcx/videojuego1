@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 120
 @export var gravity = 500
 @export var  star_dir = -1
+@export var frames : SpriteFrames
 
 var dir : int
 
@@ -12,6 +13,8 @@ var dir : int
 
 
 func _ready() -> void:
+	if frames:
+		anim.sprite_frames = frames
 	anim.play("default")
 	dir = star_dir
 	
@@ -35,7 +38,7 @@ func apply_flip():
 	anim.flip_h = (dir > 0)
 	var wall_len = 12
 	var forward_x = 32
-	ray_wall.position = Vector2(forward_x * dir, -2)
+	ray_wall.position = Vector2(forward_x * dir, 12)
 	ray_wall.target_position = Vector2(wall_len *dir, 0)
 	ray_fall.position.x = abs(ray_fall.position.x) * dir
 	
@@ -44,3 +47,11 @@ func die():
 	t.tween_property(self, "scale", Vector2(1, 0.2), 0.15)
 	await t.finished
 	queue_free() 
+	
+	
+	
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("hero"):
+		body.hurt(global_position)
+	

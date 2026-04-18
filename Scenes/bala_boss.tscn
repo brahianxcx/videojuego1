@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce852s6tp1qg7"]
+
+[ext_resource type="Script" uid="uid://bnbd5qtqhqhsc" path="res://Scripts/bala_boss.gd" id="1_eig57"]
+[ext_resource type="Texture2D" uid="uid://lflvakm28rn6" path="res://Assets/250-2502429_fireball-clipart-pixel-sprite-pixel-transparent-fire-ball.png" id="1_pckrf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdl3i"]
+radius = 70.8088
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eig57"]
+radius = 187.005
+
+[node name="BalaBoss" type="CharacterBody2D" groups=["enemies"]]
+position = Vector2(1, 0)
+scale = Vector2(-0.531788, 0.456193)
+script = ExtResource("1_eig57")
+velocidad = 600.0
+distancia_maxima = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(48.8916, -4.76837e-07)
+scale = Vector2(0.789558, 0.536809)
+shape = SubResource("CircleShape2D_pdl3i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-1.875, -1.125)
+scale = Vector2(0.36417, 0.392081)
+texture = ExtResource("1_pckrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(35.9231, 0)
+scale = Vector2(0.36417, 0.392081)
+shape = SubResource("CircleShape2D_eig57")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

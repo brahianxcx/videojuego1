@@ -1,10 +1,13 @@
 extends CharacterBody2D
 @export var move_speed = 100
 @export var move_dir : Vector2
+@export var gravity = 500
+@export var start_dir = -1 # -1 izquierda, 1 derecha
 @export var frames :SpriteFrames
 @onready var anim : AnimatedSprite2D = $AnimatedSprite2D
 var start_pos : Vector2
 var target_pos : Vector2
+
 
 func _ready() -> void:
 	start_pos = global_position
@@ -27,8 +30,22 @@ func _physics_process(delta: float) -> void:
 			
 	
 	move_and_slide()
+	
+	
+
+func die():
+	
+	set_physics_process(false) 
+	
+	var t = create_tween()
+	t.tween_property(self, "scale", Vector2(1.5, 0.2), 0.1) 
+	t.tween_property(self, "modulate:a", 0, 0.2) 
+	await t.finished
+	queue_free()
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("hero"):
 		body.hurt(global_position)
 		Globals.set_health(Globals.health-1)
 		#body.game_over()
+		
