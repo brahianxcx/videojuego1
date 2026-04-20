@@ -5913,7 +5913,7 @@ move_dir = Vector2(-500, 0)
 frames = SubResource("SpriteFrames_6m0rp")
 
 [node name="personaje" parent="." groups=["hero"] instance=ExtResource("2_sllrs")]
-position = Vector2(29670, 265)
+position = Vector2(-234, 406)
 
 [node name="HUD" parent="." instance=ExtResource("22_lr4hc")]
 

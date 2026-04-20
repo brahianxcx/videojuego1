@@ -27,9 +27,10 @@ func _physics_process(delta: float) -> void:
 		
 		
 	if not  is_hurt:
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_just_pressed("ui_up"):
+			Sounds.play("jump")
 			direction.y = -1
-		 
+			
 		if Input.is_action_pressed("ui_left"):
 			direction.x = -1
 			
@@ -88,6 +89,7 @@ func check_enemy(vy_before):
 				break
 				
 func hurt(hit_pos):
+	Sounds.play("hurt")
 	
 	var dir = sign(global_position.x - hit_pos.x)
 	velocity = Vector2(250*dir, -220)
@@ -107,7 +109,9 @@ func hurt(hit_pos):
 #	get_tree().reload_current_scene()
 	
 func add_score(amount):
+	Sounds.play("coin")
 	Globals.add_score(amount)
 
 func add_gemas(amount):
+	Sounds.play("gem")
 	Globals.add_gemas(amount)
