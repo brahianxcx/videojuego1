@@ -4851,38 +4851,7 @@ position = Vector2(-975, 339)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="recursos/personaje"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="recursos/personaje/ParallaxBackground"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
-motion_scale = Vector2(1, 1)
-motion_offset = Vector2(0, 0)
 motion_mirroring = Vector2(2750, 0)
-script = null
 
 [node name="BackgroundColorDesert" type="Sprite2D" parent="recursos/personaje/ParallaxBackground/ParallaxLayer"]
 position = Vector2(0, 424)
@@ -4890,38 +4859,8 @@ scale = Vector2(5.375, 4)
 texture = ExtResource("3_5e78q")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="recursos/personaje/ParallaxBackground"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
 scale = Vector2(4, 4)
-skew = 0.0
-motion_scale = Vector2(1, 1)
-motion_offset = Vector2(0, 0)
 motion_mirroring = Vector2(2750, 0)
-script = null
 
 [node name="BackgroundSolidSky" type="Sprite2D" parent="recursos/personaje/ParallaxBackground/ParallaxLayer2"]
 position = Vector2(348, -902)
@@ -4988,7 +4927,6 @@ next_scene = "uid://c8xigwpwmcbt8"
 
 [node name="espinas32" parent="." instance=ExtResource("12_c81s1")]
 position = Vector2(288, 440)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(136, 1.52588e-05)
@@ -4996,11 +4934,9 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(264, 1.52588e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas33" parent="espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(-192, 1.09139e-11)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas33" instance=ExtResource("12_c81s1")]
 position = Vector2(64, 1.52588e-05)
@@ -5008,11 +4944,9 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas33" instance=ExtResource("12_c81s1")]
 position = Vector2(520, 1.52588e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas32" parent="espinas32/espinas33/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(64.0001, 3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas33/espinas32/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(456.001, -1.52588e-05)
@@ -5020,11 +4954,9 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas33/espinas32/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(520.001, -1.52588e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas32" parent="espinas32/espinas33/espinas32/espinas32/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(1888, -2.00001)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas33/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(-264.001, 1.52588e-05)
@@ -5032,7 +4964,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas33/espinas32/espinas32/espinas32/espinas32/espinas34" instance=ExtResource("12_c81s1")]
 position = Vector2(-712.002, 2.00002)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas33/espinas32/espinas32/espinas32/espinas32/espinas34/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(392.001, 1.52588e-05)
@@ -5040,4 +4971,3 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas33/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("12_c81s1")]
 position = Vector2(256.001, 2.00002)
-scale = Vector2(1, 1)

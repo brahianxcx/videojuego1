@@ -6,6 +6,8 @@ const SFX_COIN : AudioStream = preload("res://Assets/sounds/sfx_coin.ogg")
 const SFX_JUMP : AudioStream = preload("res://Assets/sounds/sfx_jump.ogg")
 const SFX_HURT : AudioStream = preload("res://Assets/sounds/sfx_hurt.ogg")
 const SFX_GEM : AudioStream = preload("res://Assets/sounds/sfx_gem.ogg")
+const SFX_DISAPPEAR : AudioStream = preload("res://Assets/sounds/sfx_disappear.ogg")
+
 
 var player : AudioStreamPlayer
 
@@ -24,6 +26,9 @@ func play(name: String) -> void:
 			player.stream = SFX_HURT
 		"gem":
 			player.stream = SFX_GEM
+		"caida":
+			player.stream = SFX_DISAPPEAR
+				
 				
 				
 		_:

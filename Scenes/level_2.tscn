@@ -4882,43 +4882,12 @@ tile_map_data = PackedByteArray("AAD5/wgAAAALAAkAAAD4/wgAAAALAAkAAAD3/wgAAAALAAk
 tile_set = SubResource("TileSet_xdadj")
 
 [node name="personaje" parent="recursos" groups=["hero"] instance=ExtResource("2_cggpd")]
-position = Vector2(-959, 408)
+position = Vector2(13849, 856)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="recursos/personaje"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="recursos/personaje/ParallaxBackground"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
-motion_scale = Vector2(1, 1)
-motion_offset = Vector2(0, 0)
 motion_mirroring = Vector2(2750, 0)
-script = null
 
 [node name="BackgroundColorTrees" type="Sprite2D" parent="recursos/personaje/ParallaxBackground/ParallaxLayer"]
 position = Vector2(1368, 672)
@@ -4926,38 +4895,8 @@ scale = Vector2(5.38476, 4.40624)
 texture = ExtResource("3_055b2")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="recursos/personaje/ParallaxBackground"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
 scale = Vector2(4, 4)
-skew = 0.0
-motion_scale = Vector2(1, 1)
-motion_offset = Vector2(0, 0)
 motion_mirroring = Vector2(2750, 0)
-script = null
 
 [node name="BackgroundSolidSky" type="Sprite2D" parent="recursos/personaje/ParallaxBackground/ParallaxLayer2"]
 position = Vector2(702, -826)
@@ -5100,243 +5039,193 @@ position = Vector2(1888, 648)
 [node name="LAVA12" parent="." instance=ExtResource("13_vcilj")]
 position = Vector2(-776, 1304)
 rotation = -0.0632141
-scale = Vector2(1, 1)
 
 [node name="LAVA13" parent="." instance=ExtResource("13_vcilj")]
 position = Vector2(-1104, 1298)
 rotation = -0.0474106
-scale = Vector2(1, 1)
 
 [node name="LAVA14" parent="." instance=ExtResource("13_vcilj")]
 position = Vector2(-1232, 1304)
 rotation = -0.0790177
-scale = Vector2(1, 1)
 
 [node name="LAVA15" parent="." instance=ExtResource("13_vcilj")]
 position = Vector2(-1168, 1298)
 rotation = -0.0948212
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="." instance=ExtResource("13_vcilj")]
 position = Vector2(-712, 1304)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA16" instance=ExtResource("13_vcilj")]
 position = Vector2(191.996, 6.14104)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA17" parent="LAVA16" instance=ExtResource("13_vcilj")]
 position = Vector2(320.03, 4.11562)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17" instance=ExtResource("13_vcilj")]
 position = Vector2(3688.23, 365.701)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA17" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(-63.8721, -4.04272)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1304.04, 61.7659)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1493.01, 94.5053)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1305.44, 18.5041)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA17" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1097.47, -33.2915)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(511.934, 10.1831)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9683, 2.02246)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(2672, 126)
 rotation = 0.0948211
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(688.263, 392.6)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(254.966, -24.3433)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(126.978, -16.1396)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(318.455, -32.4131)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(254.966, -24.3433)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(126.978, -16.1396)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(317.446, -40.3492)
 rotation = 0.031607
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(254.966, -24.3433)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(126.978, -16.1396)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(323.913, -51.6203)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(254.966, -24.3433)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(126.978, -16.1396)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(314.263, -60.3225)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(254.966, -24.3433)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA18" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(126.978, -16.1396)
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19/LAVA18/LAVA19/LAVA19/LAVA19/LAVA19/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9681, 2.02251)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA19" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9678, 2.02246)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA20" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1040, -130)
 rotation = 0.0632141
-scale = Vector2(1, 1)
 
 [node name="LAVA16" parent="LAVA16/LAVA17/LAVA18/LAVA18/LAVA18/LAVA18/LAVA18/LAVA20" instance=ExtResource("13_vcilj")]
 position = Vector2(63.9688, 2.02234)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(977.803, 24.6516)
 rotation = -0.0632142
-scale = Vector2(1, 1)
 
 [node name="LAVA20" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(517.792, 45.1903)
 rotation = -0.0632141
-scale = Vector2(1, 1)
 
 [node name="LAVA21" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(453.792, 45.1901)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA22" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(1431.88, 67.8314)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA23" parent="LAVA16/LAVA17/LAVA18" instance=ExtResource("13_vcilj")]
 position = Vector2(913.803, 24.6516)
 rotation = -0.0316071
-scale = Vector2(1, 1)
 
 [node name="LAVA19" parent="LAVA16/LAVA17" instance=ExtResource("13_vcilj")]
 position = Vector2(8826.51, 492.573)
@@ -5346,15 +5235,12 @@ scale = Vector2(0.999999, 0.999999)
 [node name="espinas29" parent="." instance=ExtResource("14_bl0du")]
 position = Vector2(15528, -536)
 rotation = -0.0632141
-scale = Vector2(1, 1)
 
 [node name="espinas30" parent="." instance=ExtResource("14_bl0du")]
 position = Vector2(13840, -1834)
-scale = Vector2(1, 1)
 
 [node name="espinas31" parent="." instance=ExtResource("14_bl0du")]
 position = Vector2(13640, -1834)
-scale = Vector2(1, 1)
 
 [node name="espinas33" parent="." instance=ExtResource("14_bl0du")]
 position = Vector2(13384, -1834)
@@ -5366,7 +5252,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="." instance=ExtResource("14_bl0du")]
 position = Vector2(13120, -1834)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-1296, -3.05176e-05)
@@ -5374,7 +5259,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-1232, -3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-840, 1.52588e-05)
@@ -5382,7 +5266,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-776, 1.52588e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(448, 5.76973e-05)
@@ -5390,7 +5273,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(512, 5.76973e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-320, -9.15527e-05)
@@ -5398,7 +5280,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-256, -9.15527e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(712.001, 0.000167847)
@@ -5406,7 +5287,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(776.001, 0.000167847)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(784.002, -1.95503e-05)
@@ -5414,7 +5294,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(848.002, -1.95503e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-776.002, -3.05176e-05)
@@ -5422,7 +5301,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-712.002, -3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(520.002, -4.3869e-05)
@@ -5430,7 +5308,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(584.002, -4.3869e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-456.001, 4.57764e-05)
@@ -5438,7 +5315,6 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(-520.002, 4.69685e-05)
-scale = Vector2(1, 1)
 
 [node name="espinas34" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(328.001, 1.52588e-05)
@@ -5446,4 +5322,3 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="espinas32" parent="espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32/espinas32" instance=ExtResource("14_bl0du")]
 position = Vector2(192.001, 1.52588e-05)
-scale = Vector2(1, 1)
